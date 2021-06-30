@@ -18,10 +18,10 @@ J2EE的全称是Java 2 Platform Enterprise Edition，它是由SUN公司领导、
 
 ## J2ee主要技术规范
 
-1. ***JDBC（Java Database Connectivity）***   
+1. ***[JDBC（Java Database Connectivity）](https://github.com/XuLinSheng)***   
 JDBC API为访问不同的数据库提供了一种统一的途径，像ODBC一样，JDBC对开发者屏蔽了一些细节问题。另外，JDBC对数据库的访问也具有平台无关性。
 
-2. ***JNDI（Java Name and Directory Interface）***
+2. ***[JNDI（Java Name and Directory Interface）](https://github.com/XuLinSheng)***  
 JNDI API用于执行名字和目录服务。它提供了一致的模型来存取和操作企业级的资源，如DNS和LDAP、本地文件系统、应用服务器中的对象。
 
 3. ***EJB（Enterprise JavaBean）***  
@@ -31,29 +31,29 @@ EJB基于Java语言，提供了基于Java二进制字节代码的重用方式。
 4. ***JSP（Java Server Pages）***  
 JSP页面由HTML代码和嵌入其中的Java代码所组成。服务器在页面被客户端所请求后对页面中的Java代码进行处理，然后将生成的HTML页面返回给客户端的浏览器。
 
-5. ***Java Servlet***   
+5. ***[Java Servlet](https://github.com/XuLinSheng)***   
 Servlet是一种小型的Java程序，它扩展了Web服务器的功能。
 作为一种服务器端的应用，和CGI脚本类似，当被请求时开始执行。Servlet提供的功能与JSP类似，但实现方式不同。JSP通常在大量的HTML代码中嵌入少量的Java代码，而servlets全部由Java写成并且生成HTML。
 
-6. ***RMI/IIOP***  
+6. ***[RMI/IIOP](https://github.com/XuLinSheng)***  
 RMI（Remote Method Invocation，远程方法调用）是Java的分布式对象标准，允许位于不同主机上的Java类之间进行通信。Java RMI是个应用程序编程接口（API），还是个分布对象模型；使用RMI，Java程序员可以像调用本地操作一样进行网络调用，从而很容易地构造分布式系统。IIOP协议本来是CORBA的一种传输协议，和RMI结合在一起，使得整合非Java对象变得更加简单。
 
 7. ***Java IDL/CORBA***  
 在Java IDL的支持下，开发人员可以将Java和CORBA集成在一起。他们可以创建Java对象并在CORBAORB中部署，或者创建 Java类作为和其他ORB一起部署的CORBA对象的客户。后者可用于遗留系统的集成。
 
-8. ***XML（Extensible Markup Language）***   
+8. ***[XML（Extensible Markup Language）](https://github.com/XuLinSheng)***   
 XML是一种可以用来定义其他标记语言的语言。它被用来在不同的商务过程中共享数据。XML的发展和Java是相互独立的，但是，它和Java具有的相同目标正是平台独立性。Java和XML的组合构成一个完美的具有平台独立性的解决方案。
 
-9. ***JavaMail***  
+9. ***[JavaMail](https://github.com/XuLinSheng)***  
 JavaMail是用于存取邮件服务器的API，它提供了一套邮件服务器的抽象类。JavaMail同时支持SMTP服务器和IMAP服务器。
 
 10. ***JAF（JavaBeans Activation Framework，JavaBeans 激活框架）***  
 JavaMail利用JAF来处理MIME编码的邮件附件。MIME的字节流可以被转换成Java对象，或者转换自Java对象。大多数应用不需要直接使用JAF。
 
-11. ***JMS（Java Message Service）***  
+11. ***[JMS（Java Message Service）](https://github.com/XuLinSheng)***  
 JMS是用于和面向消息的中间件相互通信的应用程序接口（API）。它既支持点对点的域，又支持发布/订阅（publish/subscribe）类型的域，并且提供对下列类型的支持：经认可的消息传递、事务型消息的传递、一致性消息和具有持久性的订阅者支持。JMS还提供了与遗留后台系统集成的一种方式。
 
-12. ***JTA（Java Transaction Architecture，Java事务构架）***  
+12. ***[JTA（Java Transaction Architecture，Java事务构架）](https://github.com/XuLinSheng)***  
 JTA定义了一种标准的API，应用系统由此可以访问各种事务监控。
 
 13. ***JTS（Java Transaction Service，Java事务服务）***  
