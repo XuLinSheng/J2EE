@@ -1,7 +1,7 @@
 # JDBC
 > JDBC（Java Data Base Connectivity,JAVA数据库连接）  
 > J2EE的标准，定义了执行SQL语句的Java API  
-> 各个数据库厂商(Mysql，Oracle...)根据标准提供了对应的实现/驱动，使得开发人员能够以此编写执行SQL的程序
+> 各个数据库厂商(Mysql,Oracle,SqlServer,...)根据标准提供了对应的实现/驱动，使得开发人员能够以此编写执行SQL的程序
 
 <img src="https://raw.githubusercontent.com/XuLinSheng/J2EE/main/1.JDBC/jdbc1.png" width="60%">
 
@@ -34,7 +34,7 @@ Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/datab
 ```
 连接Oracle数据库：
 ```java
-Connection conn = DriverManager.getConnection("jdbc:oracle:thin:localhost:1521:database", "user", "password");
+Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:database", "user", "password");
 ```
 
 连接SqlServer数据库：
@@ -44,7 +44,8 @@ Connection conn = DriverManager.getConnection("jdbc:microsoft:sqlserver://localh
 
 ### 3. 创建语句并执行
 
-Statement：由createStatement创建，用于发送简单的SQL语句（不带参数）。
+* Statement  
+由createStatement创建，用于发送简单的SQL语句（不带参数）。
 ```java
 String id = "5";
 String sql = "delete from table where id=" +  id;
@@ -54,7 +55,8 @@ st.executeQuery(sql);
 // 如果用户传入的id为“5 or 1=1”，那么将删除表中的所有记录
 ```
 
-PreparedStatement ：继承自Statement接口，由preparedStatement创建，用于发送含有一个或多个参数的SQL语句。  
+* PreparedStatement   
+继承自Statement接口，由preparedStatement创建，用于发送含有一个或多个参数的SQL语句。  
 PreparedStatement对象比Statement对象的效率更高，并且可以防止SQL注入，所以我们一般都使用PreparedStatement。
 ```java
 /** PreparedStatement 有效的防止sql注入
@@ -68,7 +70,40 @@ ps.setString(1, “col_value”);  //占位符顺序从1开始
 ps.setString(2, “123456”); //也可以使用setObject
 ps.executeQuery(); 
 ```
+
+* CallableStatement  
+继承自PreparedStatement接口，由方法prepareCall创建，用于调用存储过程。
+```java
+CallableStatement cs = conn.prepareCall("{call proc_Ins_Dept(?,?,?)}");  //调用格式 {call 存储过程名(参数)}
+cs.setObject(1, 76);
+cs.setObject(2, "技术部");
+cs.setObject(3, "zhengzhou");
+cs.execute(); 
+```
+
 ### 4. 处理执行结果
-
+```java
+ResultSet rs = ps.executeQuery();
+While(rs.next()){
+    rs.getString(“col_name”);
+    rs.getInt(1);
+    //…
+}
+```
 ### 5. 释放资源
-
+```java
+//数据库连接（Connection）非常耗资源，尽量晚创建，尽量早的释放 
+try {
+    ...
+} catch (SQLException e) {
+    e.printStackTrace();
+} finally {
+    try {
+        if (resultSet!=null) resultSet.close();
+        if (statement!=null) statement.close();
+        if (connect!=null) connect.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }        
+}
+```
