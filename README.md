@@ -35,8 +35,8 @@ JSP页面由HTML代码和嵌入其中的Java代码所组成。服务器在页面
 Servlet是一种小型的Java程序，它扩展了Web服务器的功能。
 作为一种服务器端的应用，和CGI脚本类似，当被请求时开始执行。Servlet提供的功能与JSP类似，但实现方式不同。JSP通常在大量的HTML代码中嵌入少量的Java代码，而servlets全部由Java写成并且生成HTML。
 
-6. ***[RMI/IIOP](https://github.com/XuLinSheng)***  
-RMI（Remote Method Invocation，远程方法调用）是Java的分布式对象标准，允许位于不同主机上的Java类之间进行通信。Java RMI是个应用程序编程接口（API），还是个分布对象模型；使用RMI，Java程序员可以像调用本地操作一样进行网络调用，从而很容易地构造分布式系统。IIOP协议本来是CORBA的一种传输协议，和RMI结合在一起，使得整合非Java对象变得更加简单。
+6. ***[RMI(Remote Method Invocation)](https://github.com/XuLinSheng)***  
+RMI（远程方法调用）是Java的分布式对象标准，允许位于不同主机上的Java类之间进行通信。Java RMI是个应用程序编程接口（API），还是个分布对象模型；使用RMI，Java程序员可以像调用本地操作一样进行网络调用，从而很容易地构造分布式系统。IIOP协议本来是CORBA的一种传输协议，和RMI结合在一起，使得整合非Java对象变得更加简单。
 
 7. ***Java IDL/CORBA***  
 在Java IDL的支持下，开发人员可以将Java和CORBA集成在一起。他们可以创建Java对象并在CORBAORB中部署，或者创建 Java类作为和其他ORB一起部署的CORBA对象的客户。后者可用于遗留系统的集成。
