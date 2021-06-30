@@ -19,10 +19,10 @@ J2EE的全称是Java 2 Platform Enterprise Edition，它是由SUN公司领导、
 ## J2ee主要技术规范
 
 1. ***JDBC（Java Database Connectivity）***   
-JDBCAPI为访问不同的数据库提供了一种统一的途径，像ODBC一样，JDBC对开发者屏蔽了一些细节问题。另外，JDBC对数据库的访问也具有平台无关性。
+JDBC API为访问不同的数据库提供了一种统一的途径，像ODBC一样，JDBC对开发者屏蔽了一些细节问题。另外，JDBC对数据库的访问也具有平台无关性。
 
 2. ***JNDI（Java Name and Directory Interface）***
-JNDIAPI用于执行名字和目录服务。它提供了一致的模型来存取和操作企业级的资源，如DNS和LDAP、本地文件系统、应用服务器中的对象。
+JNDI API用于执行名字和目录服务。它提供了一致的模型来存取和操作企业级的资源，如DNS和LDAP、本地文件系统、应用服务器中的对象。
 
 3. ***EJB（Enterprise JavaBean）***  
 EJB技术是在Java Bean本地组件技术基础上开发的面向服务器端分布应用的组件技术。EJB是Sun推出的J2EE规范的一部分，自从J2EE推出之后，得到了广泛的发展，已经成为应用服务器端的标准技术。JB提供了一个开发和实施分布式商务逻辑的框架，大大地简化了具有可伸缩性和高度复杂的企业级应用的开发。EJB规范定义了EJB组件如何与EJB容器（container）进行交互。容器负责提供公用服务，如目录服务、事务管理、安全性、资源缓冲池以及容错性等。但EJB并不是实现J2EE的唯一途径。正是由于J2EE的开放性，使得有的厂商能够以一种和EJB平行的方式来达到同样的目的。
@@ -57,4 +57,4 @@ JMS是用于和面向消息的中间件相互通信的应用程序接口（API�
 JTA定义了一种标准的API，应用系统由此可以访问各种事务监控。
 
 13. ***JTS（Java Transaction Service，Java事务服务）***  
-JTS是CORBAOTS事务监控的基本实现。JTS规定了事务管理器的实现方式。该事务管理器是在高层支持 Java Transaction API（JTA）规范，在系统底层实现OMGOTS规范的Java映像。JTS事务管理器为应用服务器、资源管理器、独立的应用以及通信资源管理器等提供事务服务 [4]  。
+JTS是CORBAOTS事务监控的基本实现。JTS规定了事务管理器的实现方式。该事务管理器是在高层支持 Java Transaction API（JTA）规范，在系统底层实现OMGOTS规范的Java映像。JTS事务管理器为应用服务器、资源管理器、独立的应用以及通信资源管理器等提供事务服务 。
