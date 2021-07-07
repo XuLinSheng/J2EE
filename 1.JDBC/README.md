@@ -137,5 +137,5 @@ conn.rollback(); // 回滚事务
 
 3. 幻读：系统管理员A将数据库中所有学生的成绩从具体分数改为ABCDE等级，但是系统管理员B就在这个时候插入了一条具体分数的记录，当系统管理员A改结束后发现还有一条记录没有改过来，就好像发生了幻觉一样，这就叫幻读。
 
-MySQL事务隔离级别
+MySQL事务隔离级别   
 <img src="https://raw.githubusercontent.com/XuLinSheng/J2EE/main/1.JDBC/jdbc2.png" >
