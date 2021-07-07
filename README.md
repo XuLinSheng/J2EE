@@ -21,7 +21,7 @@ J2EE的全称是Java 2 Platform Enterprise Edition，它是由SUN公司领导、
 1. ***[JDBC（Java Database Connectivity）](https://github.com/XuLinSheng)***   
 JDBC API为访问不同的数据库提供了一种统一的途径，像ODBC一样，JDBC对开发者屏蔽了一些细节问题。另外，JDBC对数据库的访问也具有平台无关性。
 
-2. ***[JNDI（Java Name and Directory Interface）](https://github.com/XuLinSheng)***  
+2. ***JNDI（Java Name and Directory Interface）***  
 JNDI API用于执行名字和目录服务。它提供了一致的模型来存取和操作企业级的资源，如DNS和LDAP、本地文件系统、应用服务器中的对象。
 
 3. ***EJB（Enterprise JavaBean）***  
